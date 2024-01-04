@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Port References Example</title>
+    <script src="path_to_html2canvas/html2canvas.min.js"></script>
+    <script type="text/javascript">
+        mxBasePath = '../src';
+    </script>
+    <script type="text/javascript" src="../src/js/mxClient.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        #graphContainer {
+            overflow: hidden;
+            position: relative;
+            flex: 1;
+            background-color: #f2f2f2;
+            cursor: default;
+        }
+
+        #buttonsContainer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function main(container) {
+            mxConstraintHandler.prototype.pointImage = new mxImage('images/dot.gif', 10, 10);
+            var graph = new mxGraph(container);
+            graph.setConnectable(true);
+            graph.setPortsEnabled(false);
+            new mxRubberband(graph);
+            var edgeStyle = graph.getStylesheet().getDefaultEdgeStyle();
+            edgeStyle[mxConstants.STYLE_STROKECOLOR] = '#000000'; // 设置边的颜色为红色
+            edgeStyle[mxConstants.STYLE_STROKEWIDTH] = '2';       // 设置边的宽度
+            edgeStyle[mxConstants.STYLE_EDGE] = mxEdgeStyle.OrthConnector;
+            var root = graph.getDefaultParent();
+            var ports = new Array();
+            ports['w'] = {x: 0, y: 0.5, perimeter: true, constraint: 'west'};
+            ports['e'] = {x: 1, y: 0.5, perimeter: true, constraint: 'east'};
+            ports['n'] = {x: 0.5, y: 0, perimeter: true, constraint: 'north'};
+            ports['s'] = {x: 0.5, y: 1, perimeter: true, constraint: 'south'};
+            ports['nw'] = {x: 0, y: 0, perimeter: true, constraint: 'north west'};
+            ports['ne'] = {x: 1, y: 0, perimeter: true, constraint: 'north east'};
+            ports['sw'] = {x: 0, y: 1, perimeter: true, constraint: 'south west'};
+            ports['se'] = {x: 1, y: 1, perimeter: true, constraint: 'south east'};
+            var ports2 = new Array();
+            ports2['in1'] = {x: 0, y: 0, perimeter: true, constraint: 'west'};
+            ports2['in2'] = {x: 0, y: 0.25, perimeter: true, constraint: 'west'};
+            ports2['in3'] = {x: 0, y: 0.5, perimeter: true, constraint: 'west'};
+            ports2['in4'] = {x: 0, y: 0.75, perimeter: true, constraint: 'west'};
+            ports2['in5'] = {x: 0, y: 1, perimeter: true, constraint: 'west'};
+            ports2['out1'] = {x: 0.5, y: 0, perimeter: true, constraint: 'north east'};
+            ports2['out2'] = {x: 1, y: 0.5, perimeter: true, constraint: 'east'};
+            ports2['out3'] = {x: 0.5, y: 1, perimeter: true, constraint: 'south east'};
+
+            var port3 = new Array();
+            port3['top'] = {x: 0.5, y: 0, perimeter: true, constraint: 'north'};
+            port3['bottom'] = {x: 0.5, y: 1, perimeter: true, constraint: 'south'};
+            port3['left'] = {x: 0, y: 0.5, perimeter: true, constraint: 'west'};
+            port3['right'] = {x: 1, y: 0.5, perimeter: true, constraint: 'east'};
+            port3['topLeft'] = {x: 0, y: 0, perimeter: true, constraint: 'north west'};
+            port3['topRight'] = {x: 1, y: 0, perimeter: true, constraint: 'north east'};
+            port3['bottomLeft'] = {x: 0, y: 1, perimeter: true, constraint: 'south west'};
+            port3['bottomRight'] = {x: 1, y: 1, perimeter: true, constraint: 'south east'};
+
+            var diamondPorts = new Array();
+            diamondPorts['top'] = {x: 0.5, y: 0, perimeter: true, constraint: 'north'};
+            diamondPorts['bottom'] = {x: 0.5, y: 1, perimeter: true, constraint: 'south'};
+            diamondPorts['left'] = {x: 0, y: 0.5, perimeter: true, constraint: 'west'};
+            diamondPorts['right'] = {x: 1, y: 0.5, perimeter: true, constraint: 'east'};
+            mxRhombus.prototype.getPorts=function (){return diamondPorts;};
+            mxTriangle.prototype.getPorts = function() { return ports2; };
+            mxEllipse.prototype.getPorts = function(){return port3;};
+            mxDoubleEllipse.prototype.getPorts = function(){return port3;};
+            // 监听键盘事件
+            document.addEventListener('keydown', function(event) {
+                // 检查是否按下了删除键 (keyCode 为 46)
+                if (event.keyCode === 46) {
+                    var selectionCells = graph.getSelectionCells();
+                    if (selectionCells != null && selectionCells.length > 0) {
+                        // 过滤选中的边（edges）并删除它们
+                        var edgesToDelete = selectionCells.filter(function(cell) {
+                            return graph.getModel().isEdge(cell);
+                        });
+                        if (edgesToDelete.length > 0) {
+                            graph.removeCells(edgesToDelete);
+                        }
+                    }
+                }
+            });
+            mxEdgeHandler.prototype.isConnectableCell = function(cell) { return graph.connectionHandler.isConnectableCell(cell); };
+            graph.view.getTerminalPort = function(state, terminal, source) { return terminal; };
+            graph.getAllConnectionConstraints = function(terminal, source) {
+                if (terminal != null && terminal.shape != null && terminal.shape.stencil != null) {
+                    if (terminal.shape.stencil != null) {
+                        return terminal.shape.stencil.constraints;
+                    }
+                } else if (terminal != null && this.model.isVertex(terminal.cell)) {
+                    if (terminal.shape != null) {
+                        var ports = terminal.shape.getPorts();
+                        var cstrs = new Array();
+                        for (var id in ports) {
+                            var port = ports[id];
+                            var cstr = new mxConnectionConstraint(new mxPoint(port.x, port.y), port.perimeter);
+                            cstr.id = id;
+                            cstrs.push(cstr);
+                        }
+                        return cstrs;
+                    }
+                }
+                return null;
+            };
+            graph.setConnectionConstraint = function(edge, terminal, source, constraint) {
+                if (constraint != null) {
+                    var key = (source) ? mxConstants.STYLE_SOURCE_PORT : mxConstants.STYLE_TARGET_PORT;
+                    if (constraint == null || constraint.id == null) {
+                        this.setCellStyles(key, null, [edge]);
+                    } else if (constraint.id != null) {
+                        this.setCellStyles(key, constraint.id, [edge]);
+                    }
+                }
+            };
+            graph.getConnectionConstraint = function(edge, terminal, source) {
+                var key = (source) ? mxConstants.STYLE_SOURCE_PORT : mxConstants.STYLE_TARGET_PORT;
+                var id = edge.style[key];
+                if (id != null) {
+                    var c =  new mxConnectionConstraint(null, null);
+                    c.id = id;
+                    return c;
+                }
+                return null;
+            };
+            graphGetConnectionPoint = graph.getConnectionPoint;
+            graph.getConnectionPoint = function(vertex, constraint) {
+                if (constraint.id != null && vertex != null && vertex.shape != null) {
+                    var port = vertex.shape.getPorts()[constraint.id];
+                    if (port != null) {
+                        constraint = new mxConnectionConstraint(new mxPoint(port.x, port.y), port.perimeter);
+                    }
+                }
+                return graphGetConnectionPoint.apply(this, arguments);
+            };
+            graph.getModel().beginUpdate();
+            try {
+                var pageWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                var pageHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+                var toolW = pageWidth * 0.15, toolH = pageHeight * 0.9;
+
+                var tool = graph.insertVertex(root, null, '', 2, 4, toolW, toolH, 'editable=0;fillColor=#FFFFFF;resizable=0;movable=0;selectable=0;rounded=1;strokeColor=#000000;strokeWidth=2');
+                var tX=tool.x,tY=tool.y,tW=tool.width,tH=tool.height;
+                var titl = graph.insertVertex(root, null, '原子服务', 2, 4, toolW,toolH*0.05,'editable=0;fillColor=#FFFFFF;resizable=0;movable=0;selectable=0;strokeColor=#000000;strokeWidth=2');
+                var v1 = graph.insertVertex(root, null, '原子服务1', toolW*0.15, toolH*0.08,toolW*0.7 ,50,'shape=ellipse;editable=0;fillColor=#FFFFFF;resizable=0;selectable=0;strokeColor=#000000;strokeWidth=2');
+                var v2 = graph.insertVertex(root, null, '原子服务2', toolW*0.15, toolH*0.16,toolW*0.7 ,50,'shape=ellipse;editable=0;fillColor=#FFFFFF;resizable=0;selectable=0;strokeColor=#000000;strokeWidth=2');
+                var v3 = graph.insertVertex(root, null, '原子服务3', toolW*0.15, toolH*0.24,toolW*0.7 ,50,'shape=ellipse;editable=0;fillColor=#FFFFFF;resizable=0;selectable=0;strokeColor=#000000;strokeWidth=2');
+                var v4 = graph.insertVertex(root, null, '原子服务4', toolW*0.15, toolH*0.32,toolW*0.7 ,50,'shape=ellipse;editable=0;fillColor=#FFFFFF;resizable=0;selectable=0;strokeColor=#000000;strokeWidth=2');
+                var v5 = graph.insertVertex(root, null, '原子服务5', toolW*0.15, toolH*0.40,toolW*0.7 ,50,'shape=ellipse;editable=0;fillColor=#FFFFFF;resizable=0;selectable=0;strokeColor=#000000;strokeWidth=2');
+                var v6 = graph.insertVertex(root, null, '原子服务6', toolW*0.15, toolH*0.48,toolW*0.7 ,50,'shape=ellipse;editable=0;fillColor=#FFFFFF;resizable=0;selectable=0;strokeColor=#000000;strokeWidth=2');
+                var v7 = graph.insertVertex(root, null, '原子服务7', toolW*0.15, toolH*0.56,toolW*0.7 ,50,'shape=rhombus;editable=0;fillColor=#FFFFFF;resizable=0;selectable=0;strokeColor=#000000;strokeWidth=2');
+                var v8 = graph.insertVertex(root, null, '原子服务8', toolW*0.15, toolH*0.64,toolW*0.7 ,50,'shape=rhombus;editable=0;fillColor=#FFFFFF;resizable=0;selectable=0;strokeColor=#000000;strokeWidth=2');
+                var v9 = graph.insertVertex(root, null, '原子服务9', toolW*0.15, toolH*0.72,toolW*0.7 ,50,'shape=rhombus;editable=0;fillColor=#FFFFFF;resizable=0;selectable=0;strokeColor=#000000;strokeWidth=2');
+                var v10 = graph.insertVertex(root, null, '原子服10', toolW*0.15, toolH*0.8,toolW*0.7 ,50,'shape=rhombus;editable=0;fillColor=#FFFFFF;resizable=0;selectable=0;strokeColor=#000000;strokeWidth=2');
+                var v11 = graph.insertVertex(root, null, '结束', toolW*0.3, toolH*0.88,50 ,50,'shape=doubleEllipse;editable=0;fillColor=#000000;resizable=0;strokeColor=#FFFFFF;strokeWidth=2');
+                var v12 = graph.insertVertex(root, null, '开始', toolW*4, toolH*0.08,50 ,50,'shape=ellipse;editable=0;fillColor=#000000;resizable=0;strokeColor=#FFFFFF;strokeWidth=2');
+
+
+
+
+
+            } finally {
+                graph.getModel().endUpdate();
+            }
+        }
+        function saveGraph() {
+            // 获取图形容器的 DOM 元素
+            var graphContainer = document.getElementById('graphContainer');
+
+            // 计算页面宽度的30%作为x的值
+            var xValue = window.innerWidth * 0.16;
+
+            // 设置html2canvas的配置选项，使用计算出的x值
+            var options = {
+                x: xValue,
+                width: xValue*5,
+            };
+
+            // 使用 html2canvas 从图形容器创建截图
+            html2canvas(graphContainer, options).then(function(canvas) {
+                // 创建一个链接元素用于下载
+                var link = document.createElement('a');
+                link.download = 'graph.png'; // 下载文件名
+                link.href = canvas.toDataURL(); // 设置图像数据为链接的 href 属性值
+                link.click(); // 模拟点击链接以触发下载
+            });
+        }
+
+        function resetGraph() {
+            // 这里可以添加重置图形状态的代码，例如，清空所有图形元素
+            graph.getModel().clear();
+            alert('图形已重置！');
+        }
+    </script>
+</head>
+<body onload="main(document.getElementById('graphContainer'))">
+<div id="graphContainer"></div>
+
+<div id="buttonsContainer">
+    <!-- 保存按钮 -->
+    <button onclick="saveGraph()">保存</button>
+    <!-- 重置按钮 -->
+    <button onclick="resetGraph()">重置</button>
+</div>
+</body>
+</html>
