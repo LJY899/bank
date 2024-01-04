@@ -5,615 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81aee988-675a-4a13-876e-82eb2647e91d" name="更改" comment="BUG无法正常接收除去产品名称、产品期限以外的属性。">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/zjut/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/zjut/entity/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/zjut/mapper/ProductMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/zjut/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/zjut/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/addproduct.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/config/diagrameditor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/config/editor-commons.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/config/keyhandler-commons.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/config/keyhandler-minimal.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/config/layouteditor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/config/processeditor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/config/wfeditor-commons.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/config/wfgraph-commons.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/config/wftoolbar-commons.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/config/workfloweditor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/css/process.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/css/wordpress.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/diagrameditor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/diagrams/empty.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/diagrams/swimlanes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/diagrams/travel-booking.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/diagrams/withdrawal.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/grapheditor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/help/index-all.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/help/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/actor.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/alignbottom.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/aligncenter.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/alignleft.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/alignmiddle.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/alignright.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/aligntop.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/arrow.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/bell.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/bg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/block_end.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/block_start.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/bold.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/bottom.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/box.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/camera.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/center.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/classic_end.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/classic_start.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/cloud.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/cmp-bg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/collapse.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/connect.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/connector.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/console.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/copy.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/cube_green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/cut.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/cylinder.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/delete.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/diagram.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/diamond_end.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/diamond_start.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/doubleellipse.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/down.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/draw/drawbg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/draw/drawbgcolor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/draw/drawfooter.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/draw/drawheader.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/draw/mxlogo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/dude3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/earth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/ellipse.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/entity.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/expand.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/fillcolor.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/fit.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/font.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/fontcolor.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/gear.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/gear.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/grid.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/group.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/help.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/hexagon.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/hline.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/house.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/house.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/image.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/italic.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/left.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/linecolor.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/link.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/middle.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/new.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/open.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/open_end.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/open_start.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/outline.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/oval_end.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/oval_start.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/overlays/check.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/overlays/error.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/overlays/flash.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/overlays/forbidden.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/overlays/help.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/overlays/house.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/overlays/information.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/overlays/lightbulb_on.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/overlays/pencil.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/overlays/printer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/overlays/user3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/overlays/users3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/overlays/workplace.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/package.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/pan.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/paste.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/plain.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/preferences.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/press.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/preview.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/print.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/printer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/properties.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/rectangle.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/redo.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/refresh.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/rhombus.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/right.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/rounded.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/save.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/saveas.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/script.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/select.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/server.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/straight.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/swimlane.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/cancel_end.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/cancel_intermediate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/error.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/event.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/event_end.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/event_intermediate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/fork.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/inclusive.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/link.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/merge.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/message.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/message_end.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/message_intermediate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/multiple.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/rule.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/small_cancel_end.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/small_cancel_intermediate.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/small_error.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/small_event.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/small_event_end.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/small_event_intermediate.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/small_fork.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/small_inclusive.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/small_link.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/small_merge.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/small_message.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/small_message_end.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/small_message_intermediate.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/small_multiple.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/small_rule.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/small_terminate.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/small_timer.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/terminate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/symbols/timer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/tasks.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/text.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/toback.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/tofront.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/toolbar.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/top.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/tree.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/triangle.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/underline.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/undo.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/ungroup.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/up.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/vertical.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/workplace.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/wrench.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/zoom.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/zoomactual.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/zoomin.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/images/zoomout.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/layouteditor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/processeditor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/resources/app.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/resources/app_de.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/resources/app_zh.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/editors/workfloweditor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/java/src/com/mxgraph/examples/web/GraphEditor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/java/src/com/mxgraph/examples/web/OpenServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/deflate/base64.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/deflate/pako.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/checkmark.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/clear.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/collapsed.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/dropdown.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/dropdown.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/edit.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/expanded.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/grid.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/handle-fixed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/handle-main.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/handle-rotate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/handle-secondary.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/handle-terminal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/help.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/locked.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/move.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/nocolor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/refresh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/round-drop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/transparent.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/triangle-down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/triangle-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/triangle-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/triangle-up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/images/unlocked.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/js/Actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/js/Dialogs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/js/Editor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/js/EditorUi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/js/Format.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/js/Graph.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/js/Init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/js/Menus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/js/Shapes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/js/Sidebar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/js/Toolbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/jscolor/arrow.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/jscolor/cross.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/jscolor/hs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/jscolor/hv.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/jscolor/jscolor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/open.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/resources/grapheditor.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/resources/grapheditor_de.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/resources/grapheditor_se.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/resources/help.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/resources/help_de.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/resources/help_se.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/sanitizer/sanitizer.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/arrows.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/basic.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/bpmn.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Credit_Card_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Database_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Doctor1_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Earth_globe_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Email_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Empty_Folder_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Firewall_02_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Full_Folder_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Gear_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Graph_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Laptop_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Lock_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/MacBook_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Monitor_Tower_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Piggy_Bank_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Pilot1_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Printer_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Router_Icon_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Safe_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Security1_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Server_Tower_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Shopping_Cart_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Software_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Soldier1_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Suit1_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Suit2_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Suit3_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Tech1_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Telesales1_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Virtual_Machine_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Virus_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Wireless_Router_N_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Worker1_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/Workstation_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/iMac_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/clipart/iPad_128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/stencils/flowchart.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/styles/default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/styles/down.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/styles/grapheditor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/styles/help.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/styles/sprites.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/styles/thumb_horz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/styles/thumb_vertical.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/styles/up.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/grapheditor/www/viewer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/camera.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/check.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/connector.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/copy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/cut.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/delete2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/dot.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/export1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/fit_to_size.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/gradient_background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/green-dot.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/group.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/handle-connect.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/handle-main.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/icons48/column.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/icons48/earth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/icons48/gear.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/icons48/keys.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/icons48/mail_new.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/icons48/server.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/icons48/table.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/key.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/navigate_minus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/navigate_plus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/paste.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/plus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/press32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/print32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/printer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/redo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/sidebar_bg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/spacer.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/toolbar_bg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/undo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/view_1_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/view_1_132.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/view_next.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/view_previous.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/wires-grid.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/zoom_in.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/zoom_in32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/zoom_out.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/images/zoom_out32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/map-background/images/layers-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/map-background/images/layers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/map-background/images/marker-icon-2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/map-background/images/marker-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/map-background/images/marker-shadow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/map-background/leaflet-src.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/map-background/leaflet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/map-background/leaflet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/map-background/map-background.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/path_to_html2canvas/html2canvas.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/test1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/webpack/anchors.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/webpack/src/anchors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/css/common.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/css/explorer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/images/button.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/images/close.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/images/collapsed.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/images/error.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/images/expanded.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/images/maximize.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/images/minimize.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/images/normalize.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/images/point.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/images/resize.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/images/separator.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/images/submenu.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/images/transparent.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/images/warning.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/images/warning.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/images/window-title.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/images/window.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/editor/mxDefaultKeyHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/editor/mxDefaultPopupMenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/editor/mxDefaultToolbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/editor/mxEditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/handler/mxCellHighlight.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/handler/mxCellMarker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/handler/mxCellTracker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/handler/mxConnectionHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/handler/mxConstraintHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/handler/mxEdgeHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/handler/mxEdgeSegmentHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/handler/mxElbowEdgeHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/handler/mxGraphHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/handler/mxHandle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/handler/mxKeyHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/handler/mxPanningHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/handler/mxPopupMenuHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/handler/mxRubberband.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/handler/mxSelectionCellsHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/handler/mxTooltipHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/handler/mxVertexHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/index.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/io/mxCellCodec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/io/mxChildChangeCodec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/io/mxCodec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/io/mxCodecRegistry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/io/mxDefaultKeyHandlerCodec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/io/mxDefaultPopupMenuCodec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/io/mxDefaultToolbarCodec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/io/mxEditorCodec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/io/mxGenericChangeCodec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/io/mxGraphCodec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/io/mxGraphViewCodec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/io/mxModelCodec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/io/mxObjectCodec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/io/mxRootChangeCodec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/io/mxStylesheetCodec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/io/mxTerminalChangeCodec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/hierarchical/model/mxGraphAbstractHierarchyCell.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/hierarchical/model/mxGraphHierarchyEdge.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/hierarchical/model/mxGraphHierarchyModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/hierarchical/model/mxGraphHierarchyNode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/hierarchical/model/mxSwimlaneModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/hierarchical/mxHierarchicalLayout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/hierarchical/mxSwimlaneLayout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/hierarchical/stage/mxCoordinateAssignment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/hierarchical/stage/mxHierarchicalLayoutStage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/hierarchical/stage/mxMedianHybridCrossingReduction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/hierarchical/stage/mxMinimumCycleRemover.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/hierarchical/stage/mxSwimlaneOrdering.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/mxCircleLayout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/mxCompactTreeLayout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/mxCompositeLayout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/mxEdgeLabelLayout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/mxFastOrganicLayout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/mxGraphLayout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/mxParallelEdgeLayout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/mxPartitionLayout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/mxRadialTreeLayout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/layout/mxStackLayout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/model/mxCell.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/model/mxCellPath.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/model/mxGeometry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/model/mxGraphModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/mxClient.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxActor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxArrow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxArrowConnector.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxCloud.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxConnector.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxCylinder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxDoubleEllipse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxEllipse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxHexagon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxImageShape.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxLabel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxLine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxMarker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxPolyline.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxRectangleShape.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxRhombus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxShape.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxStencil.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxStencilRegistry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxSwimlane.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxText.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/shape/mxTriangle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxAbstractCanvas2D.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxAnimation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxAutoSaveManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxClipboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxConstants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxDictionary.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxDivResizer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxDragSource.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxEffects.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxEvent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxEventObject.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxEventSource.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxGuide.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxImage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxImageBundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxImageExport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxLog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxMorphing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxMouseEvent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxObjectIdentity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxPanningManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxPoint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxPopupMenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxRectangle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxResources.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxSvgCanvas2D.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxToolbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxUndoManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxUndoableEdit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxUrlConverter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxUtils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxVmlCanvas2D.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxWindow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxXmlCanvas2D.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/util/mxXmlRequest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/view/mxCellEditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/view/mxCellOverlay.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/view/mxCellRenderer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/view/mxCellState.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/view/mxCellStatePreview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/view/mxConnectionConstraint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/view/mxEdgeStyle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/view/mxGraph.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/view/mxGraphSelectionModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/view/mxGraphView.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/view/mxLayoutManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/view/mxMultiplicity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/view/mxOutline.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/view/mxPerimeter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/view/mxPrintPreview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/view/mxStyleRegistry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/view/mxStylesheet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/view/mxSwimlaneManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/js/view/mxTemporaryCellStates.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/resources/editor.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/resources/editor_de.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/resources/editor_zh.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/resources/graph.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/resources/graph_de.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/backend/page/src/resources/graph_zh.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/api/address.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/api/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/api/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/api/order.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/fonts/DIN-Bold.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/fonts/DIN-Medium.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/fonts/PingFangSC-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/fonts/PingFangSC-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/fonts/PingFangSC-Semibold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/add.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/cart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/cart_active.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/checked_false.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/checked_true.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/demo1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/demo2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/demo3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/demo4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/favico.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/headPage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/location.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/locations.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/mainBg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/money.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/noImg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/no_order.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/no_wifi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/orders.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/subtract.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/success.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/time.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/user.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/images/women.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/js/base.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/js/common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/js/request.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/js/vant.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/page/add-order.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/page/address-edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/page/address.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/page/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/page/no-wify.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/page/order.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/page/pay-success.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/page/user.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/styles/add-order.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/styles/address-edit.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/styles/address.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/styles/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/styles/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/styles/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/styles/no-wify.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/styles/order.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/styles/pay-success.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/styles/user.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/front/styles/vant.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/zjut/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/zjut/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/zjut/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/zjut/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/addproduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/addproduct.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/test1.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/page/addproduct/test1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2aUUl0xu382FXvWaLJwnCkMTVqO" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -621,6 +39,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -655,11 +74,32 @@
       <option name="presentableId" value="Default" />
       <updated>1704372798948</updated>
       <workItem from="1704372799982" duration="1590000" />
+      <workItem from="1704374401963" duration="4120000" />
     </task>
+    <task id="LOCAL-00001" summary="BUG无法正常接收除去产品名称、产品期限以外的属性。">
+      <option name="closed" value="true" />
+      <created>1704374662844</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704374662844</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="BUG无法正常接收除去产品名称、产品期限以外的属性。" />

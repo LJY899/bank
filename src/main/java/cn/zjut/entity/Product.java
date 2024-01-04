@@ -49,5 +49,5 @@ public class Product implements Serializable {
 
     // 产品状态
     private String productStatus;
-    
+
 }
