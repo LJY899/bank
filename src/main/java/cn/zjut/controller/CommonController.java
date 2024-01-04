@@ -26,7 +26,7 @@ public class CommonController {
     /**
      * 文件上传
      * @param file
-     * @return
+     * @return00
      */
     @PostMapping("/upload")
     public R<String> upload(MultipartFile file){
