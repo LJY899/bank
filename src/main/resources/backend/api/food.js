@@ -1,43 +1,43 @@
 // 查询列表接口
-const getproductPage = (params) => {
+const getDishPage = (params) => {
   return $axios({
-    url: '/product/page',
+    url: '/dish/page',
     method: 'get',
     params
   })
 }
 
 // 删除接口
-const deleteproduct = (ids) => {
+const deleteDish = (ids) => {
   return $axios({
-    url: '/product',
+    url: '/dish',
     method: 'delete',
     params: { ids }
   })
 }
 
 // 修改接口
-const editproduct = (params) => {
+const editDish = (params) => {
   return $axios({
-    url: '/product',
+    url: '/dish',
     method: 'put',
     data: { ...params }
   })
 }
 
 // 新增接口
-const addproduct = (params) => {
+const addDish = (params) => {
   return $axios({
-    url: '/product',
+    url: '/dish',
     method: 'post',
     data: { ...params }
   })
 }
 
 // 查询详情
-const queryproductById = (id) => {
+const queryDishById = (id) => {
   return $axios({
-    url: `/product/${id}`,
+    url: `/dish/${id}`,
     method: 'get'
   })
 }
@@ -52,9 +52,9 @@ const getCategoryList = (params) => {
 }
 
 // 查菜品列表的接口
-const queryproductList = (params) => {
+const queryDishList = (params) => {
   return $axios({
-    url: '/product/list',
+    url: '/dish/list',
     method: 'get',
     params
   })
@@ -73,9 +73,9 @@ const commonDownload = (params) => {
 }
 
 // 起售停售---批量起售停售接口
-const productStatusByStatus = (params) => {
+const dishStatusByStatus = (params) => {
   return $axios({
-    url: `/product/status/${params.status}`,
+    url: `/dish/status/${params.status}`,
     method: 'post',
     params: { ids: params.id }
   })
