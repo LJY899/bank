@@ -1,6 +1,6 @@
 package cn.zjut.controller;
 
-import cn.zjut.common.Result;
+import cn.zjut.common.R;
 import cn.zjut.entity.Employee;
 import cn.zjut.service.EmployeeService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
@@ -34,7 +34,7 @@ public class EmployeeController {
      * @return
      */
     @PostMapping("/login")
-    Result<Employee> login(HttpServletRequest request, @RequestBody Employee employee){
+    R<Employee> login(HttpServletRequest request, @RequestBody Employee employee){
         String password = employee.getPassword();
         String username = employee.getUsername();
         log.info("登录");
@@ -46,19 +46,19 @@ public class EmployeeController {
         queryWrapper.eq(Employee::getUsername,username);
         Employee emp = employeeService.getOne(queryWrapper);
         if (!emp.getUsername().equals(username)){
-            return Result.error("账户不存在");
+            return R.error("账户不存在");
             //密码是否正确
         }else if (!emp.getPassword().equals(password)){
-            return Result.error("账户密码错误");
+            return R.error("账户密码错误");
             //员工账户状态是否正常，1：状态正常，0：封禁
         }else if (emp.getStatus()!=1){
-            return Result.error("当前账户正在封禁");
+            return R.error("当前账户正在封禁");
             //状态正常允许登陆
         }else {
             //登陆成功，将用户id存入Session并返回登录成功结果
             log.info("登陆成功，账户存入session");
             request.getSession().setAttribute("employee",emp.getId());
-            return Result.success(employee);
+            return R.success(employee);
         }
     }
 
@@ -68,15 +68,15 @@ public class EmployeeController {
      * @return 删除结果
      */
     @PostMapping("/logout")
-    public Result<String> logout(HttpServletRequest request){
+    public R<String> logout(HttpServletRequest request){
         //尝试删除
         try {
             request.getSession().removeAttribute("employee");
         }catch (Exception e){
             //删除失败
-            return Result.error("登出失败");
+            return R.error("登出失败");
         }
-        return Result.success("登出成功");
+        return R.success("登出成功");
     }
 
     /**
@@ -85,20 +85,20 @@ public class EmployeeController {
      * @return
      */
     @PostMapping
-    public Result<String> save(HttpServletRequest request,@RequestBody Employee employee) {
+    public R<String> save(HttpServletRequest request,@RequestBody Employee employee) {
         //设置默认密码，顺手加密了
         employee.setPassword(DigestUtils.md5DigestAsHex("123456".getBytes()));
         //设置修改时间
         employee.setCreateTime(LocalDateTime.now());
         employee.setUpdateTime(LocalDateTime.now());
-        //账户默认状态0
-        employee.setStatus(0);
+        //账户默认状态1
+        employee.setStatus(1);
         //获取当前新增操作人员的id
         Long empId = (Long) request.getSession().getAttribute("employee");
         employee.setCreateUser(empId);
         employee.setUpdateUser(empId);
         //Mybatis-plus自动CRUD的功能，封装好了save方法
         employeeService.save(employee);
-        return Result.success("插入成功");
+        return R.success("新增员工成功");
     }
 }
