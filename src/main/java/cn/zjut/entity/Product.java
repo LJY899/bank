@@ -3,16 +3,19 @@ package cn.zjut.entity;
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
-
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
-public class Product implements Serializable {
+public class Product implements Serializable{
 
-    private static final long serialVersionUID = 1L;
+    /**
+     产品
+     */
+
+        private static final long serialVersionUID = 1L;
 
     // 产品ID
     private Long productId;
@@ -50,4 +53,24 @@ public class Product implements Serializable {
     // 产品状态
     private String productStatus;
 
+
+
+        //顺序
+        private Integer sort;
+
+       //简化在插入和更新数据库记录时的字段处理
+        @TableField(fill = FieldFill.INSERT)
+        private LocalDateTime createTime;
+
+
+        @TableField(fill = FieldFill.INSERT_UPDATE)
+        private LocalDateTime updateTime;
+
+
+        @TableField(fill = FieldFill.INSERT)
+        private Long createUser;
+
+
+        @TableField(fill = FieldFill.INSERT_UPDATE)
+        private Long updateUser;
 }
