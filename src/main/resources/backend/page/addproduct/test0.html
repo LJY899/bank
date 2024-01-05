@@ -14,7 +14,7 @@
     <div class="layui-card">
         <div class="layui-card-header">添加银行存款产品信息</div>
         <div class="layui-card-body" style="padding: 15px;">
-            <form class="layui-form" action="" lay-filter="addProductForm">
+            <form class="layui-form" action="" lay-filter="add-product">
 
                 <div class="layui-form-item">
                     <label class="layui-form-label">产品名称</label>
@@ -33,51 +33,51 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">年化利率（%）</label>
                     <div class="layui-input-inline">
-                        <input type="number" name="annualInterestRate" lay-verify="required" autocomplete="off" class="layui-input">
+                        <input type="number" name="annual_interest_rate" lay-verify="required" autocomplete="off" class="layui-input">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
                     <label class="layui-form-label">起存金额（元）</label>
                     <div class="layui-input-inline">
-                        <input type="number" name="minDepositAmount" lay-verify="required" autocomplete="off" class="layui-input">
+                        <input type="number" name="min_deposit_amount" lay-verify="required" autocomplete="off" class="layui-input">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
                     <label class="layui-form-label">单人限额（元）</label>
                     <div class="layui-input-inline">
-                        <input type="number" name="singleLimitAmount" lay-verify="required" autocomplete="off" class="layui-input">
+                        <input type="number" name="single_limit_amount" lay-verify="required" autocomplete="off" class="layui-input">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
                     <label class="layui-form-label">单日限额（元）</label>
                     <div class="layui-input-inline">
-                        <input type="number" name="dailyLimitAmount" lay-verify="required" autocomplete="off" class="layui-input">
+                        <input type="number" name="daily_limit_amount" lay-verify="required" autocomplete="off" class="layui-input">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
                     <label class="layui-form-label">风险等级</label>
                     <div class="layui-input-block">
-                        <input type="radio" name="riskLevel" value="低风险" title="低风险" lay-verify="required">
-                        <input type="radio" name="riskLevel" value="中风险" title="中风险" lay-verify="required">
-                        <input type="radio" name="riskLevel" value="高风险" title="高风险" lay-verify="required">
+                        <input type="radio" name="risk_level" value="低风险" title="低风险" lay-verify="required">
+                        <input type="radio" name="risk_level" value="中风险" title="中风险" lay-verify="required">
+                        <input type="radio" name="risk_level" value="高风险" title="高风险" lay-verify="required">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
                     <label class="layui-form-label">起息日</label>
                     <div class="layui-input-inline">
-                        <input type="date" name="startDate" lay-verify="required" autocomplete="off" class="layui-input">
+                        <input type="date" name="start_date" lay-verify="required" autocomplete="off" class="layui-input">
                     </div>
                 </div>
 
                 <div class="layui-form-item">
                     <label class="layui-form-label">到期日</label>
                     <div class="layui-input-inline">
-                        <input type="date" name="maturityDate" autocomplete="off" class="layui-input">
+                        <input type="date" name="maturity_date" autocomplete="off" class="layui-input">
                     </div>
                 </div>
 
@@ -85,7 +85,7 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">结息方式</label>
                     <div class="layui-input-inline" style="width: 200px;">
-                        <select name="interestPayment" lay-verify="required">
+                        <select name="interest_payment" lay-verify="required">
                             <option value="">请选择结息方式</option>
                             <option value="月结">月结</option>
                             <option value="季度结">季度结</option>
@@ -94,10 +94,11 @@
                     </div>
                 </div>
 
+
                 <div class="layui-form-item">
                     <label class="layui-form-label">产品状态</label>
-                    <div class="layui-input-block" style="width: 200px;">
-                        <select name="productStatus" lay-verify="required">
+                    <div class="layui-input-block"  style="width: 200px;">
+                        <select name="product_status" lay-verify="required">
                             <option value="">请选择产品状态</option>
                             <option value="在售">在售</option>
                             <option value="停售">停售</option>
@@ -108,7 +109,8 @@
                 <div class="layui-form-item layui-layout-admin">
                     <div class="layui-input-block">
                         <div class="layui-footer" style="left: 0;">
-                            <button class="layui-btn" lay-submit="" lay-filter="addProduct">提交</button>
+                            <!-- 保留提交按钮，不再添加跳转的逻辑 -->
+                            <button class="layui-btn" lay-submit="" lay-filter="add-product">提交</button>
                             <button type="reset" class="layui-btn layui-btn-primary">重置</button>
                         </div>
                     </div>
@@ -124,41 +126,45 @@
     layui.use(['form'], function(){
         var form = layui.form;
 
-        form.render(null, 'addProductForm');
+        form.render(null, 'add-product');
 
-        form.on('submit(addProduct)', function(data){
+        /* 监听提交 */
+        form.on('submit(add-product)', function(data){
+            // 获取表单数据
             var productData = {
                 name: data.field.name,
-                startDate: data.field.startDate,
+                start_date: data.field.start_date,
                 tenure: data.field.tenure,
-                annualInterestRate: data.field.annualInterestRate,
-                minDepositAmount: data.field.minDepositAmount,
-                singleLimitAmount: data.field.singleLimitAmount,
-                dailyLimitAmount: data.field.dailyLimitAmount,
-                riskLevel: data.field.riskLevel,
-                interestPayment: data.field.interestPayment,
-                maturityDate: data.field.maturityDate,
-                productStatus: data.field.productStatus
+                annual_interest_rate: data.field.annual_interest_rate,
+                min_deposit_amount: data.field.min_deposit_amount,
+                single_limit_amount: data.field.single_limit_amount,
+                daily_limit_amount: data.field.daily_limit_amount,
+                risk_level: data.field.risk_level,
+                interest_payment: data.field.interest_payment,
+                maturity_date: data.field.maturity_date,
+                product_status: data.field.product_status
             };
 
             $.ajax({
-                url: '/product',
-                type: 'POST',
-                contentType: 'application/json',
-                data: JSON.stringify(productData),
+                url: '/product', // 后端接口的URL
+                type: 'POST',    // 这里示例使用POST方法，但根据您的需求可能需要修改
+                contentType: 'application/json', // 设置发送数据的内容类型
+                data: JSON.stringify(productData), // 将对象转换为JSON字符串
                 success: function(response) {
-                    window.location.href = 'test1.html';
+                    // 成功处理返回的响应
+                    alert('产品信息已成功提交！');
+                    // 这里可以选择刷新页面或进行其他操作
                 },
                 error: function(error) {
+                    // 处理错误情况
                     alert('提交失败，请稍后重试！');
                 }
             });
 
-            return false;
+            return false; // 阻止表单的默认提交行为
         });
 
     });
 </script>
-
 </body>
 </html>

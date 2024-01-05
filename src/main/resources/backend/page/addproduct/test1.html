@@ -195,6 +195,12 @@
             }
         }
         function saveGraph() {
+            // 获取用户输入的名称
+            var graphName = prompt("请输入图形名称:", "默认名称");
+
+            // 如果用户点击了取消或没有输入名称，则退出函数
+            if (!graphName) return;
+
             // 获取图形容器的 DOM 元素
             var graphContainer = document.getElementById('graphContainer');
 
@@ -204,18 +210,25 @@
             // 设置html2canvas的配置选项，使用计算出的x值
             var options = {
                 x: xValue,
-                width: xValue*5,
+                width: xValue * 5,
             };
 
             // 使用 html2canvas 从图形容器创建截图
-            html2canvas(graphContainer, options).then(function(canvas) {
+            html2canvas(graphContainer, options).then(function (canvas) {
                 // 创建一个链接元素用于下载
                 var link = document.createElement('a');
-                link.download = 'graph.png'; // 下载文件名
-                link.href = canvas.toDataURL(); // 设置图像数据为链接的 href 属性值
-                link.click(); // 模拟点击链接以触发下载
+
+                // 设置下载文件名为用户输入的名称
+                link.download = graphName + '.png';
+
+                // 设置图像数据为链接的 href 属性值
+                link.href = canvas.toDataURL();
+
+                // 模拟点击链接以触发下载
+                link.click();
             });
         }
+
 
         function resetGraph() {
             // 这里可以添加重置图形状态的代码，例如，清空所有图形元素
